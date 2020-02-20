@@ -16,8 +16,8 @@
   <div class="toggle">
   <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
   <div id="myDropdown" class="dropdown-content">
-    <a>Get Started</a>
-    <a href="expenditurepage.html">Expenditure</a>
+    <a href="bbhomepage.html">Get Started</a>
+    <a>Expenditure</a>
     <a href="incomepage.html">Income</a>
     <a href="reports.html">Reports</a>
     <a href="myaccount.html">My Account</a>
@@ -25,8 +25,8 @@
 </div>
   <nav>
     <ul>
-      <li><a class="active">Get Started</a></li>
-      <li><a href="expenditurepage.html">Expenditure</a></li>
+      <li><a href="bbhomepage.html">Get Started</a></li>
+      <li><a href="" class="active">Expenditure</a></li>
       <li><a href="incomepage.html">Income</a></li>
       <li><a href="reports.html">Reports</a></li>
       <li><a href="myaccount.html">My Account</a></li>
@@ -36,10 +36,17 @@
 </header>
 <body>
   <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
-  <div class="gridbuttonlayout">
-  <button class="gridbutton" id="accountbutton" onclick=window.location.href="myaccount.html">Account<br>Settings</button>
-  <button class="gridbutton" id="incomebutton" onclick=window.location.href="incomepage.html">Manage<br>Income</button>
-  <button class="gridbutton" id="expenditurebutton" onclick=window.location.href="expenditurepage.html">Manage<br>Expenditure</button>
+  <div class="expinfo">
+    <h2>Expenditure Page</h2>
+    <p>Welcome to the expenditure page.</p>
+    <p>To enter an ammount that you have spent, click on "Declare Expenditure."</p>
+    <p> This will link you to a form regarding the purchase details and the amount. </p>
+    <p>This amount will link up to your very own financial history table.</p>
+    <p>To track your financial history, simply click on "Financial History."</p>
+    </div>
+  <div class="expendituregrid">
+  <button class="expgridbutton" id="declareexpediture" onclick=window.location.href="expenditureform.html">Declare<br>Expenditure</button>
+  <button class="expgridbutton" id="financialhistory" onclick=window.location.href="financialhistory.html">Financial<br>History</button>
 </div>
 </body>
 </html>

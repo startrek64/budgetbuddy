@@ -16,18 +16,18 @@
   <div class="toggle">
   <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
   <div id="myDropdown" class="dropdown-content">
-    <a>Get Started</a>
-    <a href="expenditurepage.html">Expenditure</a>
-    <a href="incomepage.html">Income</a>
+    <a href="bbhomepage.html">Get Started</a>
+    <a href="">Expenditure</a>
+    <a href="income.html">Income</a>
     <a href="reports.html">Reports</a>
     <a href="myaccount.html">My Account</a>
 </div>
 </div>
   <nav>
     <ul>
-      <li><a class="active">Get Started</a></li>
+      <li><a href="bbhomepage.html">Get Started</a></li>
       <li><a href="expenditurepage.html">Expenditure</a></li>
-      <li><a href="incomepage.html">Income</a></li>
+      <li><a class="active">Income</a></li>
       <li><a href="reports.html">Reports</a></li>
       <li><a href="myaccount.html">My Account</a></li>
   </ul>
@@ -36,10 +36,13 @@
 </header>
 <body>
   <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
-  <div class="gridbuttonlayout">
-  <button class="gridbutton" id="accountbutton" onclick=window.location.href="myaccount.html">Account<br>Settings</button>
-  <button class="gridbutton" id="incomebutton" onclick=window.location.href="incomepage.html">Manage<br>Income</button>
-  <button class="gridbutton" id="expenditurebutton" onclick=window.location.href="expenditurepage.html">Manage<br>Expenditure</button>
+  <div class="expinfo">
+    <h2>Income</h2>
+
+    </div>
+  <div class="expendituregrid">
+  <button class="expgridbutton" id="declareincome" onclick=window.location.href="expenditureform.html">Declare<br>Income</button>
+  <button class="expgridbutton" id="financialhistory" onclick=window.location.href="financialhistory.html">Financial<br>History</button>
 </div>
 </body>
 </html>
