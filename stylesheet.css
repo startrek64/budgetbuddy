@@ -310,3 +310,71 @@ nav.active ul{
   padding:20px;
   font-size: 14px;
 }
+
+
+#container a{
+  font-size:13px;
+  font-family:monospace;
+
+}
+
+.login{
+  background-color: black;
+  color:white;
+  padding:40px;
+  width:250px;
+  float:left;
+  margin-top:80px;
+  height:400px;
+
+}
+
+#loginform{
+  width:240px;
+  text-align:center;
+
+}
+
+#loginform input{
+  width:240px;
+  text-align: center;
+  border:none;
+  border-bottom: 1px solid white;
+  font-family: monospace;
+  font-size:16px;
+  font-weight:200px;
+  padding:10px 0;
+  transition: border 0.5s;
+  outline: none;
+  color:black;
+
+}
+
+#loginform input[type=button]{
+  border:none;
+  width:190px;
+  background:white;
+  color:black;
+  font-size:16px;
+  line-height:25px;
+  padding:10px 0;
+  border-radius:15px;
+  cursor:pointer;
+
+}
+
+#loginform input[type=button]:hover{
+  color:white;
+  background:black;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+}
+
+#loginform a{
+  color:white;
+  padding:5px;
+}
