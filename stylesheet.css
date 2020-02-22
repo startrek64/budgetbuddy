@@ -321,18 +321,22 @@ nav.active ul{
 .login{
   background-color: black;
   color:white;
-  padding:40px;
+  margin: 0 auto;
   width:250px;
-  float:left;
-  margin-top:80px;
-  height:400px;
-
+  padding:40px;
+  height:420px;
+  margin-top: 80px;
 }
 
 #loginform{
   width:240px;
   text-align:center;
+  padding-top: 10px;
 
+}
+
+#loginform p{
+  padding-top: 1px;
 }
 
 #loginform input{
@@ -368,13 +372,62 @@ nav.active ul{
   background:black;
 }
 
-.container{
+#container{
   display:flex;
   flex-direction: row;
   width:100%;
+  padding-top: 50px;
 }
 
 #loginform a{
   color:white;
   padding:5px;
+}
+
+.signup{
+  padding:40px;
+  width:250px;
+  margin:auto;
+  margin-top:80px;
+  height:430px;
+  margin-left:180px;
+  margin:0 auto;
+  margin-top:90px;
+  background:black;
+  color:white;
+}
+
+.signup form{
+  width:240px;
+  text-align: center;
+}
+
+.signup input{
+  width:240px;
+  text-align: center;
+  border: none;
+  border-bottom:1px solid black;
+  font-family:16px;
+  font-weight:200px;
+  padding:10px 0;
+  transition: border 0.5s;
+  outline:none;
+  color:black;
+}
+
+.signup input[type=button]{
+  border:none;
+  width:190px;
+  background:white;
+  color:black;
+  font-size:16px;
+  line-height: 25px;
+  padding:10px 0;
+  border-radius: 15px;
+  cursor:pointer;
+}
+
+.signup input[type=button]:hover{
+  color:white;
+  background-color: black;
 }
