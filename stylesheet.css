@@ -431,3 +431,8 @@ nav.active ul{
   color:white;
   background-color: black;
 }
+
+.signup a{
+  color:white;
+  font-weight: bold;
+}
