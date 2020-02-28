@@ -6,12 +6,13 @@
     BudgetBuddy
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="stylesheet.css">
   <!-- <link rel="stylesheet" href="stylesheet.css"> -->
   <script src="budgetbuddy.js"></script>
   <script src="materialize.js"></script>
   <!-- <script src="addOnJs.js"></script>
   <script src="init.js"></script> -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 <!-- <header>
@@ -27,30 +28,26 @@
 </div>
 </div> -->
 <header>
-<nav class="light-blue lighten 1" role="navigation">
-  <div class="nav-wrapper container"><img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
-    <ul class="right hide-on-med-and-down">
+  <img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
+  <div class="toggle">
+  <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a>Get Started</a>
+    <a href="incomepage.html">Income</a>
+    <a href="expenditurepage.html">Expenditure</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Sign Out</a>
+</div>
+</div>
+  <nav>
+    <ul>
       <li><a class="active">Get Started</a></li>
       <li><a href="incomepage.html">Income</a></li>
       <li><a href="expenditurepage.html">Expenditure</a></li>
       <li><a href="reports.html">Reports</a></li>
       <li><a href="login.html">Sign Out</a></li>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a class="active">Get Started</a></li>
-        <li><a href="incomepage.html">Income</a></li>
-        <li><a href="expenditurepage.html">Expenditure</a></li>
-        <li><a href="reports.html">Reports</a></li>
-        <li style="float:right"><a class="active"<a href="login.html">Sign Out</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-        <i class="material-icons">menu</i></a>
-    </div>
-    </ul>
+  </ul>
 </nav>
-<div class="clearfix"></div>
-
-</header>
 <!-- <body>
   <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
   <div class="gridbuttonlayout">
