@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    BudgetBuddy
+    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "stylesheet" href="stylesheet.css">
+<script src="budgetbuddy.js"></script>
+</head>
+
+
+
+<header>
+  <img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
+  <div class="toggle">
+  <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Get Started</a>
+    <a href="incomepage.html">Income</a>
+    <a>Expenditure</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Sign Out</a>
+</div>
+</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Get Started</a></li>
+      <li><a href="incomepage.html">Income</a></li>
+      <li><a href="" class="active">Expenditure</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="login.html">Sign Out</a></li>
+  </ul>
+</nav>
+<div class="clearfix"></div>
+</header>
+<body>
+  <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
+  <div class="expinfo">
+    <h2>Expenditure Page</h2>
+    <p>Welcome to the expenditure page.</p>
+    <p>To enter an ammount that you have spent, click on <strong>Declare Expenditure.</strong></p>
+    <p> This will link you to a form regarding the purchase details and the amount. </p>
+    <p>This amount will link up to your very own financial history table.</p>
+    <p>To track your financial history, simply click on <strong>Financial History.</strong></p>
+    </div>
+  <div class="expendituregrid">
+  <button class="expgridbutton" id="declareexpediture" onclick=window.location.href="expenditureform.html">Declare<br>Expenditure</button>
+  <button class="expgridbutton" id="financialhistory" onclick=window.location.href="financialhistory.html">Financial<br>History</button>
+</div>
+</body>
+</html>
