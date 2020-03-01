@@ -37,7 +37,19 @@
 </header>
 <body>
 
-
+<form class="incomeform">
+  <h2>Declare new Income</h2>
+  <label for="incometype">Income Type</label>
+  <select id="type" name="type">
+    <option value="please">Please select</option>
+   <option value="earned">Earned Income</option>
+   <option value="rental">Rental Income</option>
+   <option value="friend">Payment from a friend</option>
+   <option value="other">Other Source</option>
+ </select>
+ <p></p><p></p>
+  <div class="dateofpurchase">
+  <label for="date">Date of Income</label>
 	<div class="date-picker">
 		<div class="selected-date"></div>
 
@@ -51,7 +63,8 @@
 			<div class="days"></div>
 		</div>
 	</div>
-
+</div>
+</form>
 	<script src="main.js"></script>
 
 </body>

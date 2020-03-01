@@ -444,13 +444,14 @@ color:white;
 .date-picker {
 	position: relative;
 	width: 100%;
-	max-width: 120px;
-	height: 60px;
+	max-width: 160px;
+	height: 30px;
 	background-color: #FFF;
-	margin: 30px auto;
+	display: inline-block;
+  float: right;
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  font-size: 16px;
-
+  font-size: 14px;
+  color:black;
 	cursor: pointer;
 	user-select: none;
 }
@@ -527,4 +528,35 @@ font-size: 16px;
 }
 .date-picker .dates .days .day.selected {
 	background-color: #00CA85;
+}
+
+.dateofpurchase{
+  display: inline;
+  margin-top: 50px;
+
+
+}
+.incomeform{
+
+
+  padding:20px;
+  width:350px;
+  margin:auto;
+  margin-top:80px;
+  height:430px;
+
+
+
+  background:#ee6e73;
+  color:white;
+}
+
+.incomeform label{
+
+  text-align: : left;
+}
+
+.incomeform select{
+  float: right;
+  width:160px;
 }
