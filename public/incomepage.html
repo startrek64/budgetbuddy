@@ -6,6 +6,7 @@
     </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel = "stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="datapicker.css">
 <script src="budgetbuddy.js"></script>
 </head>
 
@@ -16,18 +17,18 @@
   <div class="toggle">
   <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="index.html">Get Started</a>
-    <a>Income</a>
+    <a href="bbhomepage.html">Get Started</a>
     <a href="expenditurepage.html">Expenditure</a>
+    <a>Income</a>
     <a href="reports.html">Reports</a>
     <a href="login.html">Sign Out</a>
 </div>
 </div>
   <nav>
     <ul>
-      <li><a href="index.html">Get Started</a></li>
-      <li><a class="active">Income</a></li>
+      <li><a href="bbhomepage.html">Get Started</a></li>
       <li><a href="expenditurepage.html">Expenditure</a></li>
+      <li><a class="active">Income</a></li>
       <li><a href="reports.html">Reports</a></li>
       <li><a href="login.html">Sign Out</a></li>
   </ul>
@@ -35,18 +36,23 @@
 <div class="clearfix"></div>
 </header>
 <body>
-  <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
-  <div class="expinfo">
-    <h2>Income Page</h2>
-    <p>Welcome to the income page.</p>
-    <p>Here you will be able to manage your financial incomes such as wages or loans.</p>
-    <p>Click on <strong>Declare Income</strong> to provide information regarding a new income</p>
-    <p> This information includes what it is and the specific amount of money coming in.</p>
-    <p>To track your financial history, simply click on <strong>Financial History.</strong></p>
-    </div>
-  <div class="expendituregrid">
-  <button class="expgridbutton" id="declareincome" onclick=window.location.href="expenditureform.html">Declare<br>Income</button>
-  <button class="expgridbutton" id="financialhistory" onclick=window.location.href="financialhistory.html">Financial<br>History</button>
-</div>
+	<h1>CUSTOM<span>DATE</span>PICKER</h1>
+
+	<div class="date-picker">
+		<div class="selected-date"></div>
+
+		<div class="dates">
+			<div class="month">
+				<div class="arrows prev-mth">&lt;</div>
+				<div class="mth"></div>
+				<div class="arrows next-mth">&gt;</div>
+			</div>
+
+			<div class="days"></div>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+	
 </body>
 </html>
