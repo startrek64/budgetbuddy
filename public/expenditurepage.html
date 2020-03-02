@@ -35,7 +35,7 @@
 <div class="clearfix"></div>
 </header>
 <body>
-  <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
+<!--  <button class="reportsbutton" onclick=window.location.href="reports.html">View<br>Reports</button>
   <div class="expinfo">
     <h2>Expenditure Page</h2>
     <p>Welcome to the expenditure page.</p>
@@ -48,5 +48,103 @@
   <button class="expgridbutton" id="declareexpediture" onclick=window.location.href="expenditureform.html">Declare<br>Expenditure</button>
   <button class="expgridbutton" id="financialhistory" onclick=window.location.href="financialhistory.html">Financial<br>History</button>
 </div>
+-->
+<form class="expenditureform">
+  <h2>Declare new Expenditure</h2>
+  <p>----------------------------------------------------------------- </p>
+  <div class="expenditureamount">
+  <label for="expenditureamount">Expenditure amount (in £)</label>
+  <input type="number" onchange="setTwoNumberDecimal" min="0" step="0.01" value="0.00" >
+</div>
+<br>
+<p>----------------------------------------------------------------- </p>
+  <div class="container">
+    <label for="expendituretype">Type of Expenditure</label>
+  <div class="select-box">
+       <div class="options-container">
+         <div class="option">
+           <input
+             type="radio"
+             class="radio"
+             id="incometype"
+             name="category"
+           >
+
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="groceries" name="category">
+           <label for="groceries">Groceries</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="rent" name="category" >
+           <label for="rent">Rent</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="bills" name="category" >
+           <label for="bills">Bills</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="luxury" name="category" >
+           <label for="luxury">Luxury Spend</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="friend" name="category">
+           <label for="friend">Payment from a friend</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="direct" name="category">
+           <label for="direct">Direct Debit</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="other" name="category">
+           <label for="other">Other</label>
+         </div>
+       </div>
+
+       <div class="selected">
+         Select Spending Type
+       </div>
+     </div>
+   </div>
+
+ <p></p><p></p>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <p>----------------------------------------------------------------- </p>
+  <div class="dateofpurchase">
+  <label for="date">Date of Expenditure</label>
+	<div class="date-picker">
+		<div class="selected-date"></div>
+
+		<div class="dates">
+			<div class="month">
+				<div class="arrows prev-mth">&lt;</div>
+				<div class="mth"></div>
+				<div class="arrows next-mth">&gt;</div>
+			</div>
+
+			<div class="days"></div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<button type="submit" value="Submit">Submit</button>
+  <button type="reset" value="Reset">Reset</button>
+</form>
+	<script src="main.js"></script>
+  <script src="typedropdown.js"></script>
+
 </body>
 </html>

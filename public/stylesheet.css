@@ -537,7 +537,7 @@ font-size: 16px;
 
 
 }
-.incomeform{
+.incomeform, .expenditureform{
 
 
   padding:20px;
@@ -552,12 +552,12 @@ font-size: 16px;
   color:white;
 }
 
-.incomeform label{
+.incomeform label, .expenditureform label{
 
   text-align: : left;
 }
 
-.incomeform select{
+.incomeform select, .expenditureform select{
   float: right;
   width:160px;
 }
@@ -649,14 +649,12 @@ font-size: 16px;
   display: none;
 }
 
-.incomeamount{
 
-}
-.incomeamount label{
+.incomeamount label, .expenditureamount label{
   float:left;
 }
 
-.incomeamount input{
+.incomeamount input, .expenditureamount input{
   float:right;
   border-radius: 8px;
   width:160px;
@@ -670,7 +668,7 @@ font-size: 16px;
 }
 
 
-.incomeform button{
+.incomeform button, .expenditureform button{
   margin-top:50px;
   border-radius: 8px;
   font-size: 16px;
@@ -678,8 +676,8 @@ font-size: 16px;
   cursor:pointer;
 }
 
-.incomeform button:hover{
-  margin-top:50px;
+.incomeform button:hover, .expenditureform button:hover{
+
   border-radius: 8px;
   font-size: 16px;
   padding:10px;
