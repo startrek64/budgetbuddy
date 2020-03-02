@@ -454,6 +454,7 @@ color:white;
   color:black;
 	cursor: pointer;
 	user-select: none;
+  border-radius: 8px;
 }
 
 .date-picker:hover {
@@ -479,7 +480,7 @@ color:white;
 	left: 0;
 	right: 0;
 font-size: 16px;
-	background-color: #FFF;
+	background-color: white;
 }
 
 .date-picker .dates.active {
@@ -506,12 +507,12 @@ font-size: 16px;
 }
 
 .date-picker .dates .month .arrows:hover {
-	background-color: #F3F3F3;
+	background-color: #f04646;
   font-size: 10px;
 }
 
 .date-picker .dates .month .arrows:active {
-	background-color: #00CA85;
+	background-color: #f04646;
 }
 
 .date-picker .dates .days {
@@ -527,7 +528,7 @@ font-size: 16px;
 	color: #313131;
 }
 .date-picker .dates .days .day.selected {
-	background-color: #00CA85;
+	background-color: #f04646;
 }
 
 .dateofpurchase{
@@ -542,8 +543,8 @@ font-size: 16px;
   padding:20px;
   width:350px;
   margin:auto;
-  margin-top:80px;
-  height:430px;
+  margin-top:20px;
+  height:560px;
 
 
 
@@ -559,4 +560,131 @@ font-size: 16px;
 .incomeform select{
   float: right;
   width:160px;
+}
+
+.select-box {
+  display: flex;
+  width: 160px;
+  flex-direction: column;
+  float:right;
+  font-size: 14px;
+}
+
+.select-box .options-container {
+  background: white;
+  color: black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: black;
+  position: relative;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 100px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #f04646;
+  color:white;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.incomeamount{
+
+}
+.incomeamount label{
+  float:left;
+}
+
+.incomeamount input{
+  float:right;
+  border-radius: 8px;
+  width:160px;
+  text-align: center;
+  font-size:14px;
+}
+
+
+.container{
+  display: inline;
+}
+
+
+.incomeform button{
+  margin-top:50px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding:10px;
+  cursor:pointer;
+}
+
+.incomeform button:hover{
+  margin-top:50px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding:10px;
+  cursor:pointer;
+  background-color: red;
+  border-color: red;
+  color:white;
 }

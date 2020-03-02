@@ -18,8 +18,8 @@
   <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="index.html">Get Started</a>
-    <a href="expenditurepage.html">Expenditure</a>
     <a>Income</a>
+    <a href="expenditurepage.html">Expenditure</a>
     <a href="reports.html">Reports</a>
     <a href="login.html">Sign Out</a>
 </div>
@@ -27,8 +27,9 @@
   <nav>
     <ul>
       <li><a href="index.html">Get Started</a></li>
-      <li><a href="expenditurepage.html">Expenditure</a></li>
       <li><a class="active">Income</a></li>
+      <li><a href="expenditurepage.html">Expenditure</a></li>
+
       <li><a href="reports.html">Reports</a></li>
       <li><a href="login.html">Sign Out</a></li>
   </ul>
@@ -39,15 +40,72 @@
 
 <form class="incomeform">
   <h2>Declare new Income</h2>
-  <label for="incometype">Income Type</label>
-  <select id="type" name="type">
-    <option value="please">Please select</option>
-   <option value="earned">Earned Income</option>
-   <option value="rental">Rental Income</option>
-   <option value="friend">Payment from a friend</option>
-   <option value="other">Other Source</option>
- </select>
+  <p>----------------------------------------------------------------- </p>
+  <div class="incomeamount">
+  <label for="incomeamount">Income amount (in £)</label>
+  <input type="number" onchange="setTwoNumberDecimal" min="0" step="0.01" value="0.00" >
+</div>
+<br>
+<p>----------------------------------------------------------------- </p>
+  <div class="container">
+    <label for="incometype">Type of Income</label>
+  <div class="select-box">
+       <div class="options-container">
+         <div class="option">
+           <input
+             type="radio"
+             class="radio"
+             id="incometype"
+             name="category"
+           >
+
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="earned" name="category">
+           <label for="earned">Earned Income</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="rental" name="category" >
+           <label for="rental">Rental Income</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="bursary" name="category" >
+           <label for="bursary">Bursary</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="loan" name="category" >
+           <label for="loan">Loan</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="friend" name="category">
+           <label for="friend">Payment from a friend</label>
+         </div>
+
+         <div class="option">
+           <input type="radio" class="radio" id="other" name="category">
+           <label for="other">Other</label>
+         </div>
+       </div>
+
+       <div class="selected">
+         Select Income Type
+       </div>
+     </div>
+   </div>
+
  <p></p><p></p>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <p>----------------------------------------------------------------- </p>
   <div class="dateofpurchase">
   <label for="date">Date of Income</label>
 	<div class="date-picker">
@@ -64,8 +122,13 @@
 		</div>
 	</div>
 </div>
+<br>
+<br>
+<button type="submit" value="Submit">Submit</button>
+  <button type="reset" value="Reset">Reset</button>
 </form>
 	<script src="main.js"></script>
+  <script src="typedropdown.js"></script>
 
 </body>
 </html>
