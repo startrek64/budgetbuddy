@@ -8,8 +8,8 @@ app.get('/', function(req, res){
     console.log('request was made on: / ');
 })
 
-app.get('/homepage', function(req, res){
-    res.sendFile(__dirname + '/public/homepage.html');
+app.get('/index', function(req, res){
+    res.sendFile(__dirname + '/public/index.html');
     console.log('request was made on: /homepage ');
 })
 
