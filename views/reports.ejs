@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    BudgetBuddy
+  </title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <script src="budgetbuddy.js"></script>
+  <script src="materialize.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+
+<header>
+  <img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
+  <div class="toggle">
+    <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="homepage">Get Started</a>
+      <a href="income">Income</a>
+      <a href="expenditure">Expenditure</a>
+      <a>Reports</a>
+      <a href="/">Sign Out</a>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="homepage">Get Started</a></li>
+      <li><a href="income">Income</a></li>
+      <li><a href="expenditure">Expenditure</a></li>
+      <li><a class="active">Reports</a></li>
+      <li><a href="/">Sign Out</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <body>
+
+    <div class="optionsDiv">
+      Filter Category:
+      <select id="selectField">
+        <option value="All" selected>All</option>
+        <option value="Salary">Salary</option>
+        <option value="Rental">Rental</option>
+        <option value="Bursary">Bursary</option>
+        <option value="Loan">Loan</option>
+        <option value="Friend">Friend/Family</option>
+        <option value="Other">Other</option>
+      </select>
+      <script type="text/javascript" src="filterTable.js"></script>
+    </div>
+
+    <table id="myTable">
+      <tr id="HeadRow">
+        <td>Amount</td>
+        <td>Category</td>
+        <td>Date</td>
+      </tr>
+
+      <% for(var i=0; i < repos.length; i++){ %>
+      <tr>
+        <td><%= repos[i].ammount %></td>
+        <td><%= repos[i].category %></td>
+        <td><%= repos[i].date %></td>
+      </tr>
+
+      <% } %>
+
+    </table>
+
+  </body>
+</html>
