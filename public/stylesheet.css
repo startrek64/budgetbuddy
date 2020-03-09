@@ -31,39 +31,6 @@ nav{
   float:right;
 }
 
-.homepagebuttons{
-  background-color: #ee6e73;
-  width:400px;
-  text-align: center;
-  padding:20px;
-  margin:0 auto;
-
-}
-
-.homepagebuttons button{
-  padding:20px;
-  margin:20px;
-  cursor: pointer;
-  font-family:'Roboto';
-  font-size: 20px;
-  border-radius: 8px;
-
-}
-
-.homepagebuttons button:hover{
-  background-color: red;
-  color:White;
-  border-color: red;
-  font-weight: bold;
-  box-shadow:2px 2px 2px 2px red;
-  transition: 0.8s;
-
-}
-
-.homepagebuttons h1{
-  color:white;
-}
-
 .clearfix{
   clear:both;
 }
@@ -202,6 +169,152 @@ color:white;
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.gridbuttonlayout{
+  display:grid;
+  width:30%;
+  grid-gap: 40px;
+  margin-left: 50%;
+  margin-top:50px;
+
+
+
+}
+.gridbutton{
+  font-family:monospace;
+  font-size:28px;
+  cursor:pointer;
+  text-align: center;
+  padding:30px;
+  font-weight: bold;
+  display:inline;
+  border-radius: 25px;
+  border-width: thick;
+
+
+}
+
+#incomebutton:hover{
+  box-shadow: 0px 15px 20px green;
+
+  transition: 0.5s;
+}
+
+#expenditurebutton:hover{
+  box-shadow: 0px 15px 20px red;
+
+  transition: 0.5s;
+}
+
+#accountbutton:hover{
+  box-shadow: 0px 15px 20px black;
+
+  transition: 0.5s;
+}
+
+.reportsbutton{
+  font-family:monospace;
+  font-size:28px;
+  cursor:pointer;
+  text-align: center;
+  padding:30px;
+  font-weight: bold;
+  display:inline;
+  float:left;
+  margin-left: 15%;
+  width:30%;
+  margin-top:80px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  border-radius: 25px;
+
+}
+.reportsbutton:hover{
+  background-color:white;
+
+  background-image: url(images/reportbuttonbackground.jpg);
+  transition:0.5s;
+  cursor:pointer;
+
+
+  box-shadow: 0px 15px 20px black;
+}
+
+
+#incomebutton:hover{
+  background-image: url(images/incomebuttonbackground.png);
+
+}
+
+#expenditurebutton:hover{
+  background-image: url(images/expenditurebuttonbackground.png);
+}
+
+#accountbutton:hover{
+  background-image: url(images/accountbuttonbackground.png);
+}
+
+.expendituregrid{
+
+
+  display:inline-block;
+  margin-left:175px;
+
+
+}
+
+  .expgridbutton{
+    font-family:monospace;
+    font-size:22px;
+    cursor:pointer;
+    text-align: center;
+    padding:50px;
+    font-weight: bold;
+    display:inline;
+    border-radius: 25px;
+    border-width: thick;
+
+
+  }
+
+  .expgridbutton:hover{
+    box-shadow: 0px 15px 20px black;
+
+    transition: 0.5s;
+  }
+
+
+@media(max-width:1210px){
+  .expendituregrid{
+    width:auto;
+    display:grid;
+    grid-gap:30px;
+    padding:10px;
+
+  }
+  .expgridbutton{
+    padding:40px;
+  }
+}
+
+
+#declareexpediture:hover{
+  box-shadow: 0px 15px 20px red;
+  transition: 0.5s;
+}
+
+#declareincome:hover{
+  box-shadow: 0px 15px 20px green;
+  transition: 0.5s;
+}
+
+.expinfo{
+  text-align: center;
+  width:auto;
+  margin-top: 70px;
+  padding:20px;
+  font-size: 14px;
+}
 
 
 #container a{
