@@ -11,6 +11,9 @@
   <script src="budgetbuddy.js"></script>
   <script src="materialize.js"></script>
 
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content=1010858472376-iljq2hd7cgai5mddju8rmhmmuvcdtges.apps.googleusercontent.com>
+
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
@@ -24,7 +27,7 @@
     <a href="income">Income</a>
     <a href="expenditure">Expenditure</a>
     <a href="report">Reports</a>
-    <a href="/">Sign Out</a>
+    <a href="#" onclick="signOut();">Sign out</a>
 </div>
 </div>
   <nav>
@@ -36,6 +39,14 @@
       <li><a href="/">Sign Out</a></li>
   </ul>
 </nav>
+</header>
+<body>
 
+<div>
+<h1>Hi, your current balance is at:</h1>
+<h1>£<%= value %></h1>
+</div>
+
+</body>
 
 </html>
