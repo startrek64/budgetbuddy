@@ -9,33 +9,30 @@
   <link rel="stylesheet" href="stylesheet.css">
 
   <script src="budgetbuddy.js"></script>
-  <script src="materialize.js"></script>
+  
 
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 
 <header>
-  <img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
-  <div class="toggle">
-  <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a>Get Started</a>
-    <a href="income">Income</a>
-    <a href="expenditure">Expenditure</a>
-    <a href="report">Reports</a>
-    <a href="/">Sign Out</a>
-</div>
-</div>
-  <nav>
-    <ul>
-      <li><a class="active">Get Started</a></li>
-      <li><a href="income">Income</a></li>
-      <li><a href="expenditure">Expenditure</a></li>
-      <li><a href="report">Reports</a></li>
-      <li><a href="/">Sign Out</a></li>
-  </ul>
-</nav>
 
+</header>
+<body>
+<div class="homepagebuttons">
+  <h1>Welcome To BudgetBuddy</h1>
+  <button href="income" type="button" name="incomebutton">Declare a new Income</button>
+  <br>
+  <button href="expenditure" type="button" name="expenditurebutton">Declare a new Expenditure</button>
+  <br>
+  <button href="reports" type="button" name="reportsbutton">View Financial Reports</button>
+  <br>
+  <button href="/" type="button" name="signoutbutton">Sign Out</button>
+
+</div>
+
+
+
+</body>
 
 </html>

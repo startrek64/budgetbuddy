@@ -35,4 +35,4 @@ app.get('/income', function(req, res){
 
 app.listen(8080);
 
-console.log("Yo Dog, We do be listening to Localhost: 8080")
+console.log("Listening to Localhost: 8080")
