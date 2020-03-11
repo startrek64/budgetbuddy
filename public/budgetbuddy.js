@@ -23,3 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);
   });
+
+
+  /// GOOGLE
+  function onSignIn(googleUser) {
+    const profile = googleUser.getBasicProfile();
+    const el = document.getElementById('greeting');
+    el.textContent = 'Hello ' + profile.getName() + '!';
+  }
+
+  async function signOut() {
+    await gapi.auth2.getAuthInstance().signOut();
+    console.log('User signed out.');
+    const el = document.getElementById('greeting');
+    el.textContent = 'Bye!';
+  }

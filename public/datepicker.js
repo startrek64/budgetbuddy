@@ -115,18 +115,3 @@ function formatDate (d) {
 
 	return day + ' / ' + month + ' / ' + year;
 }
-
-
-/// GOOGLE
-function onSignIn(googleUser) {
-  const profile = googleUser.getBasicProfile();
-  const el = document.getElementById('greeting');
-  el.textContent = 'Hello ' + profile.getName() + '!';
-}
-
-async function signOut() {
-  await gapi.auth2.getAuthInstance().signOut();
-  console.log('User signed out.');
-  const el = document.getElementById('greeting');
-  el.textContent = 'Bye!';
-}
