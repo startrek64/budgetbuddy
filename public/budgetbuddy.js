@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const el = document.getElementById('greeting');
     el.textContent = 'Hello ' + profile.getName() + '!';
     const pr = document.getElementById('linkToHome');
+    pr.style.visibility = 'visible';
     const link = document.createElement('a');
     link.textContent = 'Continue to Account';
     link.href = 'http://localhost:8080/homepage';
     pr.appendChild(link);
   }
-
 
 
   async function signOut() {

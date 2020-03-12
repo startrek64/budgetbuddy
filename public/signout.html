@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    BudgetBuddy
+    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "stylesheet" href="stylesheet.css">
+<script src="budgetbuddy.js"></script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content=1010858472376-iljq2hd7cgai5mddju8rmhmmuvcdtges.apps.googleusercontent.com>
+</head>
+
+<header>
+</header>
+<body>
+
+<div class="login">
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="profileImg" id="image"></div>
+    <div class="userName" id="greeting">Go back to Account</div>
+    <button class="signOutButton"><a href="http://localhost:8080/#" onclick="signOut();">Sign out</a></button>
+</div>
+</body>
+</html>

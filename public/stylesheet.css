@@ -732,20 +732,35 @@ font-size: 16px;
 //
 
 
-/* Authorised User Name */
-.userName{
-  color: #000;
-  padding: 0.5rem;
-  background-color: #fff;
-  border: 0.2rem solid #808080;
-}
+
 
 /* Google Sign-In Button */
 .g-signin2{
   width: 100%;
 }
 
-.signOutButton{
+
+/* #greeting{
+    margin-top: 10px;
+} */
+
+.userName{
+    width : 70%
+    color: #0A38ED;
+    font-weight: 1000;
+    margin-top: 10px;
+}
+
+#linkToHome{
+    visibility: hidden;
+    color: #000;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 0.2rem solid #808080;
+    margin-top: 10px;
+}
+
+/* .signOutButton{
   box-sizing: border-box;
   display: block;
   margin: 1rem auto;
@@ -757,4 +772,4 @@ font-size: 16px;
   color: #DDDDDD;
   text-align: center;
   cursor: pointer;
-}
+} */
