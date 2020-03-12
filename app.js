@@ -11,10 +11,19 @@ app.get('/', function(req, res){
     console.log('request was made on: / ');
 })
 
+app.get('/homepage', function(req, res){
+    res.sendFile(__dirname + '/public/homepage.html');
+    console.log('request was made on: /homepage ');
+})
 
 app.get('/signup', function(req, res){
     res.sendFile(__dirname + '/public/signup.html');
     console.log('request was made on: /signup ');
+})
+
+app.get('/signout', function(req, res){
+    res.sendFile(__dirname + '/public/signout.html');
+    console.log('request was made on: / ');
 })
 
 // fire controller - boom boom
