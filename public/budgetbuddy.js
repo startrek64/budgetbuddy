@@ -30,11 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const profile = googleUser.getBasicProfile();
     const el = document.getElementById('greeting');
     el.textContent = 'Hello ' + profile.getName() + '!';
+    const pr = document.getElementById('linkToHome');
+    const link = document.createElement('a');
+    link.textContent = 'Continue to Account';
+    link.href = 'http://localhost:8080/homepage';
+    pr.appendChild(link);
   }
+
+
 
   async function signOut() {
     await gapi.auth2.getAuthInstance().signOut();
     console.log('User signed out.');
     const el = document.getElementById('greeting');
-    el.textContent = 'Bye!';
+    el.textContent = 'Not Signed In!';
   }
