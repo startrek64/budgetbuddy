@@ -1,11 +1,15 @@
 var bodyParser = require('body-parser');
 
+// Local varibles to store infomation for reports and user current account balance
+
 var data = [{ammount: 200, category: 'Salary', date: '01/02/2020'}, {ammount: 400, category: 'Salary', date: '01/02/2020'}];
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var valueCounter = 600.00;
 var valueEdit = 0;
 
 module.exports = function(app){
+
+// Page routing from server to client side, both posting and getting
 
 app.post('/income', urlencodedParser, function(req, res){
     data.push(req.body);
@@ -20,15 +24,6 @@ app.post('/expenditure', urlencodedParser, function(req, res){
     valueCounter = +valueCounter + +valueEdit;
     console.log(req.body);
 });
-
-
-//app.post('/', urlencodedParser, function(req, res){
-//    const user = (req.body);
-//    console.log(req.body);
-//    if(req.body.user == 'admin'){
-//        res.redirect('/homepage')};   
-//});
-// attempted login - doesn't redirect properly
 
 app.get('/homepage', function(req, res){
    res.render('homepage', {value: valueCounter});
@@ -47,12 +42,6 @@ app.get('/expenditure', function(req, res){
     res.render('expenditurepage');
     console.log('request was made on: /expenditure ');
 });
-
-//app.get('/', function(req, res){
-//    res.render('login');
-//    console.log('request was made on: /');
-
-//});
 
 
 

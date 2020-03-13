@@ -2,9 +2,13 @@ var express = require('express');
 var app = express();
 var actionController = require('./controllers/actionController')
 
+// required modules
+
 app.set('view engine', 'ejs');
 
 app.use(express.static('./public'));
+
+// express routes
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/public/login.html');
@@ -21,7 +25,7 @@ app.get('/signout', function(req, res){
     console.log('request was made on: / ');
 })
 
-// fire controller - boom boom
+// fire controller
 
 actionController(app);
 
