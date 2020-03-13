@@ -20,7 +20,7 @@
     <a href="income">Income</a>
     <a>Expenditure</a>
     <a href="report">Reports</a>
-    <a href="/">Sign Out</a>
+    <a href="signout">Sign out</a>
 </div>
 </div>
   <nav>
@@ -29,7 +29,7 @@
       <li><a href="income">Income</a></li>
       <li><a href="" class="active">Expenditure</a></li>
       <li><a href="report">Reports</a></li>
-      <li><a href="/">Sign Out</a></li>
+      <li><a href="signout">Sign out</a></li>
   </ul>
 </nav>
 <div class="clearfix"></div>
@@ -54,7 +54,7 @@
   <p>----------------------------------------------------------------- </p>
   <div class="expenditureamount">
   <label for="expenditureamount">Expenditure amount (in £)</label>
-  <input type="number" id='ammount' name='ammount' value="-0" step=".01">
+  <input type="number" id='ammount' name='ammount' value="-0">
 </div>
 <br>
 <p>---------------------------------------------------------- </p>
@@ -94,7 +94,7 @@
            <input type="radio" class="radio" id="other" name="category" value="Other">
            <label for="other">Other</label>
          </div>
-       
+
 
  <p></p><p></p>
  <br>
@@ -113,29 +113,29 @@
   <script src="typedropdown.js"></script>
   <script>
     const myForm = document.getElementById('myForm');
-  
+
     myForm.addEventListener('submit', function (e){
     e.preventDefault();
-  
+
     const formData = new FormData(this);
     const searchParams = new URLSearchParams();
-  
+
     for (const pair of formData){
       searchParams.append(pair[0], pair[1])
     }
-  
+
     fetch('/expenditure', {
       method: 'post',
       body: searchParams
-  
+
     }).then(function(response){
       return response.text();
     })
-  
-  
-  
+
+
+
   });
-  
+
     </script>
 </body>
 </html>
