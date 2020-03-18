@@ -1,113 +1,106 @@
 /* Navbar container */
-
-*{
-font-family:helvetica,sans-serif;;
+* {
+  font-family: helvetica, sans-serif;
+  ;
 }
 
-body{
-  margin:0;
-  padding:0;
-  font-family:sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
   background: url(images/greybackground.jpg);
   background-attachment: fixed;
 }
 
-
-header{
-  position:relative;
+header {
+  position: relative;
   max-width: 100%;
   margin: 20px auto;
-  padding:10px;
+  padding: 10px;
   font-family: 'Roboto';
   box-sizing: border-box;
-  border-radius:4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
   background-color: #ee6e73;
-  color:white;
+  color: white;
 }
 
-
-nav{
-  float:right;
+nav {
+  float: right;
 }
 
-.clearfix{
-  clear:both;
+.clearfix {
+  clear: both;
 }
 
-
-
-nav ul{
-  margin:0;
-  padding:0;
-  display:flex;
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-nav ul li{
-list-style: none;
+nav ul li {
+  list-style: none;
 }
 
-nav ul li a{
-  display:block;
+nav ul li a {
+  display: block;
   margin: 10px 0;
   padding: 10px 20px;
   text-decoration: none;
-  color: white;;
+  color: white;
+  ;
   font-size: 22px;
-
 }
 
-nav ul li a.active,nav ul li a:hover{
-  background:#de3c3c;
-  color:white;
+nav ul li a.active, nav ul li a:hover {
+  background: #de3c3c;
+  color: white;
   transition: 0.5s;
 }
 
-
-@media (min-width:1068px){
-  .dropbtn{
-    display:none;
+@media (min-width:1068px) {
+  .dropbtn {
+    display: none;
   }
 }
 
-@media (max-width:1200px){
-  header{
-    margin:20px;
+@media (max-width:1200px) {
+  header {
+    margin: 20px;
   }
 }
 
-@media (max-width:1068px){
+@media (max-width:1068px) {
+  .toggle:before {
+    content: '';
+    line-height: 40px;
+  }
 
+  .toggle.active:before {
+    content: '*'
+  }
 
+  nav {
+    display: none;
+  }
 
-.toggle:before{
-  content: '';
-  line-height:40px;
-}
+  .toggle {
+    display: none;
+  }
 
-.toggle.active:before{
-  content:'*'
-}
+  nav.active {
+    display: block;
+    width: 100%;
+  }
 
-nav{
-  display:none;
-}
+  nav.active ul {
+    display: block;
+  }
 
-.toggle{display:none;}
-
-
-nav.active{
-  display:block;
-  width:100%;
-}
-
-nav.active ul{
-  display:block;
-}
-
-nav.active ul{
-  margin:0;
-}
+  nav.active ul {
+    margin: 0;
+  }
 }
 
 /* Dropdown Button */
@@ -119,37 +112,32 @@ nav.active ul{
   border: none;
   cursor: pointer;
   align-self: center;
-
-  float:right
+  float: right
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
   background-color: #ff8091;
-  color:white;
+  color: white;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .toggle {
   position: relative;
   display: inline-block;
-  float:right;
-
-
-
+  float: right;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  margin-top:55px;
+  margin-top: 55px;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-size: 18px;
-
 }
 
 /* Links inside the dropdown */
@@ -158,415 +146,382 @@ nav.active ul{
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ff7083;
-color:white;
+  color: white;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 
-.gridbuttonlayout{
-  display:grid;
-  width:30%;
+.gridbuttonlayout {
+  display: grid;
+  width: 30%;
   grid-gap: 40px;
   margin-left: 50%;
-  margin-top:50px;
-
-
-
+  margin-top: 50px;
 }
-.gridbutton{
-  font-family:monospace;
-  font-size:28px;
-  cursor:pointer;
+
+.gridbutton {
+  font-family: monospace;
+  font-size: 28px;
+  cursor: pointer;
   text-align: center;
-  padding:30px;
+  padding: 30px;
   font-weight: bold;
-  display:inline;
+  display: inline;
   border-radius: 25px;
   border-width: thick;
-
-
 }
 
-#incomebutton:hover{
+#incomebutton:hover {
   box-shadow: 0px 15px 20px green;
-
   transition: 0.5s;
 }
 
-#expenditurebutton:hover{
+#expenditurebutton:hover {
   box-shadow: 0px 15px 20px red;
-
   transition: 0.5s;
 }
 
-#accountbutton:hover{
+#accountbutton:hover {
   box-shadow: 0px 15px 20px black;
-
   transition: 0.5s;
 }
 
-.reportsbutton{
-  font-family:monospace;
-  font-size:28px;
-  cursor:pointer;
+.reportsbutton {
+  font-family: monospace;
+  font-size: 28px;
+  cursor: pointer;
   text-align: center;
-  padding:30px;
+  padding: 30px;
   font-weight: bold;
-  display:inline;
-  float:left;
+  display: inline;
+  float: left;
   margin-left: 15%;
-  width:30%;
-  margin-top:80px;
+  width: 30%;
+  margin-top: 80px;
   padding-top: 150px;
   padding-bottom: 150px;
   border-radius: 25px;
-
 }
-.reportsbutton:hover{
-  background-color:white;
 
+.reportsbutton:hover {
+  background-color: white;
   background-image: url(images/reportbuttonbackground.jpg);
-  transition:0.5s;
-  cursor:pointer;
-
-
+  transition: 0.5s;
+  cursor: pointer;
   box-shadow: 0px 15px 20px black;
 }
 
-
-#incomebutton:hover{
+#incomebutton:hover {
   background-image: url(images/incomebuttonbackground.png);
-
 }
 
-#expenditurebutton:hover{
+#expenditurebutton:hover {
   background-image: url(images/expenditurebuttonbackground.png);
 }
 
-#accountbutton:hover{
+#accountbutton:hover {
   background-image: url(images/accountbuttonbackground.png);
 }
 
-.expendituregrid{
-
-
-  display:inline-block;
-  margin-left:175px;
-
-
+.expendituregrid {
+  display: inline-block;
+  margin-left: 175px;
 }
 
-  .expgridbutton{
-    font-family:monospace;
-    font-size:22px;
-    cursor:pointer;
-    text-align: center;
-    padding:50px;
-    font-weight: bold;
-    display:inline;
-    border-radius: 25px;
-    border-width: thick;
+.expgridbutton {
+  font-family: monospace;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  padding: 50px;
+  font-weight: bold;
+  display: inline;
+  border-radius: 25px;
+  border-width: thick;
+}
 
+.expgridbutton:hover {
+  box-shadow: 0px 15px 20px black;
+  transition: 0.5s;
+}
 
+@media(max-width:1210px) {
+  .expendituregrid {
+    width: auto;
+    display: grid;
+    grid-gap: 30px;
+    padding: 10px;
   }
 
-  .expgridbutton:hover{
-    box-shadow: 0px 15px 20px black;
-
-    transition: 0.5s;
-  }
-
-
-@media(max-width:1210px){
-  .expendituregrid{
-    width:auto;
-    display:grid;
-    grid-gap:30px;
-    padding:10px;
-
-  }
-  .expgridbutton{
-    padding:40px;
+  .expgridbutton {
+    padding: 40px;
   }
 }
 
-
-#declareexpediture:hover{
+#declareexpediture:hover {
   box-shadow: 0px 15px 20px red;
   transition: 0.5s;
 }
 
-#declareincome:hover{
+#declareincome:hover {
   box-shadow: 0px 15px 20px green;
   transition: 0.5s;
 }
 
-.expinfo{
+.expinfo {
   text-align: center;
-  width:auto;
+  width: auto;
   margin-top: 70px;
-  padding:20px;
+  padding: 20px;
   font-size: 14px;
 }
 
-
-#container a{
-  font-size:13px;
-
+#container a {
+  font-size: 13px;
 }
 
-.login{
+.login {
   background-color: #ee6e73;
-  color:white;
+  color: white;
   margin: 0 auto;
-  width:250px;
-  padding:40px;
-  height:420px;
+  width: 250px;
+  padding: 40px;
+  height: 420px;
   margin-top: 80px;
 }
 
-#loginform{
-  width:240px;
-  text-align:center;
+#loginform {
+  width: 240px;
+  text-align: center;
   padding-top: 10px;
-
 }
 
-#loginform p{
+#loginform p {
   padding-top: 1px;
 }
 
-#loginform input{
-  width:240px;
+#loginform input {
+  width: 240px;
   text-align: center;
-  border:none;
+  border: none;
   border-bottom: 1px solid white;
   font-family: monospace;
-  font-size:16px;
-  font-weight:200px;
-  padding:10px 0;
+  font-size: 16px;
+  font-weight: 200px;
+  padding: 10px 0;
   transition: border 0.5s;
   outline: none;
-  color:black;
-
+  color: black;
 }
 
-#loginform input[type=button]{
-  border:none;
-  width:190px;
-  background:white;
-  color:black;
-  font-size:16px;
-  line-height:25px;
-  padding:10px 0;
-  border-radius:15px;
-  cursor:pointer;
-
+#loginform input[type=button] {
+  border: none;
+  width: 190px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-#loginform input[type=button]:hover{
-  color:white;
-  background:#ee6e73;
+#loginform input[type=button]:hover {
+  color: white;
+  background: #ee6e73;
 }
 
-#container{
-  display:flex;
+#container {
+  display: flex;
   flex-direction: row;
-  width:100%;
+  width: 100%;
   padding-top: 50px;
 }
 
-#loginform a{
-  color:white;
-  padding:5px;
+#loginform a {
+  color: white;
+  padding: 5px;
 }
 
-.signup{
-  padding:40px;
-  width:250px;
-  margin:auto;
-  margin-top:80px;
-  height:430px;
-  margin-left:180px;
-  margin:0 auto;
-  margin-top:90px;
-  background:#ee6e73;
-  color:white;
+.signup {
+  padding: 40px;
+  width: 250px;
+  margin: auto;
+  margin-top: 80px;
+  height: 430px;
+  margin-left: 180px;
+  margin: 0 auto;
+  margin-top: 90px;
+  background: #ee6e73;
+  color: white;
 }
 
-.signup form{
-  width:240px;
+.signup form {
+  width: 240px;
   text-align: center;
 }
 
-.signup input{
-  width:240px;
+.signup input {
+  width: 240px;
   text-align: center;
   border: none;
-  border-bottom:1px solid black;
-  font-family:16px;
-  font-weight:200px;
-  padding:10px 0;
+  border-bottom: 1px solid black;
+  font-family: 16px;
+  font-weight: 200px;
+  padding: 10px 0;
   transition: border 0.5s;
-  outline:none;
-  color:black;
+  outline: none;
+  color: black;
 }
 
-.signup input[type=button]{
-  border:none;
-  width:190px;
-  background:white;
-  color:black;
-  font-size:16px;
+.signup input[type=button] {
+  border: none;
+  width: 190px;
+  background: white;
+  color: black;
+  font-size: 16px;
   line-height: 25px;
-  padding:10px 0;
+  padding: 10px 0;
   border-radius: 15px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.signup input[type=button]:hover{
-  color:white;
+.signup input[type=button]:hover {
+  color: white;
   background-color: #ee6e73;
 }
 
-.signup a{
-  color:white;
+.signup a {
+  color: white;
   font-weight: bold;
 }
 
 .date-picker {
-	position: relative;
-	width: 100%;
-	max-width: 160px;
-	height: 30px;
-	background-color: #FFF;
-	display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 160px;
+  height: 30px;
+  background-color: #FFF;
+  display: inline-block;
   float: right;
-	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   font-size: 14px;
-  color:black;
-	cursor: pointer;
-	user-select: none;
+  color: black;
+  cursor: pointer;
+  user-select: none;
   border-radius: 8px;
 }
 
 .date-picker:hover {
-	background-color: #F3F3F3;
+  background-color: #F3F3F3;
 }
 
 .date-picker .selected-date {
-	width: 100%;
-	height: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	color: #313131;
-
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
 }
 
 .date-picker .dates {
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-font-size: 16px;
-	background-color: white;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  background-color: white;
 }
 
 .date-picker .dates.active {
-	display: block;
+  display: block;
   font-size: 16px;
 }
 
 .date-picker .dates .month {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 2px solid #EEE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #EEE;
   font-size: 12px;
 }
 
 .date-picker .dates .month .arrows {
-	width: 35px;
-	height: 35px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #313131;
-	font-size: 10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
+  font-size: 10px;
 }
 
 .date-picker .dates .month .arrows:hover {
-	background-color: #f04646;
+  background-color: #f04646;
   font-size: 10px;
 }
 
 .date-picker .dates .month .arrows:active {
-	background-color: #f04646;
+  background-color: #f04646;
 }
 
 .date-picker .dates .days {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	height: 150px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 150px;
   font-size: 10px;
 }
+
 .date-picker .dates .days .day {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #313131;
-}
-.date-picker .dates .days .day.selected {
-	background-color: #f04646;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
 }
 
-.dateofpurchase{
+.date-picker .dates .days .day.selected {
+  background-color: #f04646;
+}
+
+.dateofpurchase {
   display: inline;
   margin-top: 50px;
-
-
-}
-.incomeform, .expenditureform{
-
-
-  padding:20px;
-  width:350px;
-  margin:auto;
-  margin-top:20px;
-  height:560px;
-
-
-
-  background:#ee6e73;
-  color:white;
 }
 
-.incomeform label, .expenditureform label{
+.incomeform, .expenditureform {
+  padding: 20px;
+  width: 350px;
+  margin: auto;
+  margin-top: 20px;
+  height: 500px;
+  background: #ee6e73;
+  color: white;
+}
 
+.incomeform label, .expenditureform label {
   text-align: : left;
 }
 
-.incomeform select, .expenditureform select{
+.incomeform select, .expenditureform select {
   float: right;
-  width:160px;
+  width: 160px;
 }
 
 .select-box {
   display: flex;
   width: 160px;
   flex-direction: column;
-  float:right;
+  float: right;
   font-size: 14px;
 }
 
@@ -579,7 +534,6 @@ font-size: 16px;
   transition: all 0.4s;
   border-radius: 8px;
   overflow: hidden;
-
   order: 1;
 }
 
@@ -589,22 +543,18 @@ font-size: 16px;
   margin-bottom: 8px;
   color: black;
   position: relative;
-
   order: 0;
 }
 
 .selected::after {
   content: "";
-
   background-size: contain;
   background-repeat: no-repeat;
-
   position: absolute;
   height: 100%;
   width: 32px;
   right: 10px;
   top: 5px;
-
   transition: all 0.4s;
 }
 
@@ -614,7 +564,7 @@ font-size: 16px;
   overflow-y: scroll;
 }
 
-.select-box .options-container.active + .selected::after {
+.select-box .options-container.active+.selected::after {
   transform: rotateX(180deg);
   top: -6px;
 }
@@ -638,7 +588,7 @@ font-size: 16px;
 
 .select-box .option:hover {
   background: #f04646;
-  color:white;
+  color: white;
 }
 
 .select-box label {
@@ -649,42 +599,38 @@ font-size: 16px;
   display: none;
 }
 
-
-.incomeamount label, .expenditureamount label{
-  float:left;
+.incomeamount label, .expenditureamount label {
+  float: left;
 }
 
-.incomeamount input, .expenditureamount input{
-  float:right;
+.incomeamount input, .expenditureamount input {
+  float: right;
   border-radius: 8px;
-  width:160px;
+  width: 160px;
   text-align: center;
-  font-size:14px;
+  font-size: 14px;
 }
 
-
-.container{
+.container {
   display: inline;
 }
 
-
-.incomeform button, .expenditureform button{
-  margin-top:50px;
+.incomeform button, .expenditureform button {
+  margin-top: 50px;
   border-radius: 8px;
   font-size: 16px;
-  padding:10px;
-  cursor:pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.incomeform button:hover, .expenditureform button:hover{
-
+.incomeform button:hover, .expenditureform button:hover {
   border-radius: 8px;
   font-size: 16px;
-  padding:10px;
-  cursor:pointer;
+  padding: 10px;
+  cursor: pointer;
   background-color: red;
   border-color: red;
-  color:white;
+  color: white;
 }
 
 #myTable {
@@ -730,34 +676,27 @@ font-size: 16px;
 }
 
 //
-
-
-
-
 /* Google Sign-In Button */
-.g-signin2{
+.g-signin2 {
   width: 100%;
 }
-
 
 /* #greeting{
     margin-top: 10px;
 } */
-
-.userName{
-    width : 70%
-    color: #0A38ED;
-    font-weight: 1000;
-    margin-top: 10px;
+.userName {
+  width: 70% color: #0A38ED;
+  font-weight: 1000;
+  margin-top: 10px;
 }
 
-#linkToHome{
-    visibility: hidden;
-    color: #000;
-    padding: 0.5rem;
-    background-color: #fff;
-    border: 0.2rem solid #808080;
-    margin-top: 10px;
+#linkToHome {
+  visibility: hidden;
+  color: #000;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 0.2rem solid #808080;
+  margin-top: 10px;
 }
 
 /* .signOutButton{
