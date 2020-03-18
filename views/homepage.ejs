@@ -21,15 +21,15 @@
 <header>
   <img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
   <div class="toggle">
-  <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a>Get Started</a>
-    <a href="income">Income</a>
-    <a href="expenditure">Expenditure</a>
-    <a href="report">Reports</a>
-    <a href="#" onclick="signOut();">Sign out</a>
-</div>
-</div>
+    <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a>Get Started</a>
+      <a href="income">Income</a>
+      <a href="expenditure">Expenditure</a>
+      <a href="report">Reports</a>
+      <a href="#" onclick="signOut();">Sign out</a>
+    </div>
+  </div>
   <nav>
     <ul>
       <li><a class="active">Get Started</a></li>
@@ -37,15 +37,18 @@
       <li><a href="expenditure">Expenditure</a></li>
       <li><a href="report">Reports</a></li>
       <li><a href="signout">Sign Out</a></li>
-  </ul>
-</nav>
+    </ul>
+  </nav>
 </header>
+
 <body>
 
-<div>
-<h1>Hi, your current balance is at:</h1>
-<h1>£<%= value %></h1>
-</div>
+  <div>
+    <h1>Hi, your current balance is at:</h1>
+    <h1>£
+      <%= value %>
+    </h1>
+  </div>
 
 </body>
 
