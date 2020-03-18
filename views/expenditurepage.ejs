@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>
     BudgetBuddy
-    </title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel = "stylesheet" href="stylesheet.css">
-<script src="budgetbuddy.js"></script>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="budgetbuddy.js"></script>
 </head>
 
 
@@ -14,15 +15,15 @@
 <header>
   <img src="images/budgetbuddylogo.jpg" class="logo" width="230px">
   <div class="toggle">
-  <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="homepage">Get Started</a>
-    <a href="income">Income</a>
-    <a>Expenditure</a>
-    <a href="report">Reports</a>
-    <a href="signout">Sign Out</a>
-</div>
-</div>
+    <button onclick="dropdownFunction()" class="dropbtn">Find Page:</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="homepage">Get Started</a>
+      <a href="income">Income</a>
+      <a>Expenditure</a>
+      <a href="report">Reports</a>
+      <a href="signout">Sign Out</a>
+    </div>
+  </div>
   <nav>
     <ul>
       <li><a href="homepage">Get Started</a></li>
@@ -30,99 +31,101 @@
       <li><a href="" class="active">Expenditure</a></li>
       <li><a href="report">Reports</a></li>
       <li><a href="signout">Sign Out</a></li>
-  </ul>
-</nav>
-<div class="clearfix"></div>
+    </ul>
+  </nav>
+  <div class="clearfix"></div>
 </header>
+
 <body>
 
-<form class="expenditureform" id="myForm">
-  <h2>Declare new Expenditure</h2>
-  <p>----------------------------------------------------------------- </p>
-  <div class="expenditureamount">
-  <label for="expenditureamount">Expenditure amount (in £)</label>
-  <input type="number" id='ammount' name='ammount' value="-0" step=".01">
-</div>
-<br>
-<p>---------------------------------------------------------- </p>
+  <form class="expenditureform" id="myForm">
+    <h2>Declare new Expenditure</h2>
+    <p>----------------------------------------------------------------- </p>
+    <div class="expenditureamount">
+      <label for="expenditureamount">Expenditure amount (in £)</label>
+      <input type="number" max="-1" id='ammount' name='ammount' value="-0" step=".01">
+    </div>
+    <br>
+    <p>----------------------------------------------------------------- </p>
 
 
-         <div class="option">
-           <input type="radio" class="radio" id="groceries" name="category" value="Groceries">
-           <label for="groceries">Groceries</label>
-         </div>
+    <div class="option">
+      <input type="radio" class="radio" id="groceries" name="category" value="Groceries">
+      <label for="groceries">Groceries</label>
+    </div>
 
-         <div class="option">
-           <input type="radio" class="radio" id="rent" name="category" value="Rent" >
-           <label for="rent">Rent</label>
-         </div>
+    <div class="option">
+      <input type="radio" class="radio" id="rent" name="category" value="Rent">
+      <label for="rent">Rent</label>
+    </div>
 
-         <div class="option">
-           <input type="radio" class="radio" id="bills" name="category" value="Bills" >
-           <label for="bills">Bills</label>
-         </div>
+    <div class="option">
+      <input type="radio" class="radio" id="bills" name="category" value="Bills">
+      <label for="bills">Bills</label>
+    </div>
 
-         <div class="option">
-           <input type="radio" class="radio" id="luxury" name="category" value="Luxury" >
-           <label for="luxury">Luxury Spend</label>
-         </div>
+    <div class="option">
+      <input type="radio" class="radio" id="luxury" name="category" value="Luxury">
+      <label for="luxury">Luxury Spend</label>
+    </div>
 
-         <div class="option">
-           <input type="radio" class="radio" id="friend" name="category" value="Friend">
-           <label for="friend">Payment from a friend</label>
-         </div>
+    <div class="option">
+      <input type="radio" class="radio" id="friend" name="category" value="Friend">
+      <label for="friend">Payment from a friend</label>
+    </div>
 
-         <div class="option">
-           <input type="radio" class="radio" id="direct" name="category" value="Direct Debit">
-           <label for="direct">Direct Debit</label>
-         </div>
+    <div class="option">
+      <input type="radio" class="radio" id="direct" name="category" value="Direct Debit">
+      <label for="direct">Direct Debit</label>
+    </div>
 
-         <div class="option">
-           <input type="radio" class="radio" id="other" name="category" value="Other">
-           <label for="other">Other</label>
-         </div>
-       
+    <div class="option">
+      <input type="radio" class="radio" id="other" name="category" value="Other">
+      <label for="other">Other</label>
+    </div>
 
- <p></p><p></p>
- <br>
- <br>
- <br>
- <br>
- <br>
 
- <p>----------------------------------------------------------------- </p>
- <input type='date' name='date'></input>
-<br>
-<br>
-<button type="submit" value="submit">Submit</button>
-</form>
+    <p></p>
+    <p></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>----------------------------------------------------------------- </p>
+    <input type='date' name='date'></input>
+    <br>
+    <br>
+    <button type="submit" value="submit">Submit</button>
+  </form>
 
   <script src="typedropdown.js"></script>
   <script>
     const myForm = document.getElementById('myForm');
-  
-    myForm.addEventListener('submit', function (e){
-    e.preventDefault();
-  
-    const formData = new FormData(this);
-    const searchParams = new URLSearchParams();
-  
-    for (const pair of formData){
-      searchParams.append(pair[0], pair[1])
-    }
-  
-    fetch('/expenditure', {
-      method: 'post',
-      body: searchParams
-  
-    }).then(function(response){
-      return response.text();
-    })
-  
-  
-  
-  });
-  
-    </script>
+
+    myForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const searchParams = new URLSearchParams();
+
+      for (const pair of formData) {
+        searchParams.append(pair[0], pair[1])
+      }
+
+      fetch('/expenditure', {
+        method: 'post',
+        body: searchParams
+
+      }).then(function(response) {
+        return response.text();
+      })
+
+
+
+    });
+  </script>
 </body>
+
 </html>
