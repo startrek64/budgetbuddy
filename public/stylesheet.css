@@ -1,9 +1,11 @@
-/* Navbar container */
+/*Applies to everything*/ 
+
 * {
   font-family: helvetica, sans-serif;
   ;
 }
 
+/*Main Segment of each page */
 body {
   margin: 0;
   padding: 0;
@@ -12,6 +14,7 @@ body {
   background-attachment: fixed;
 }
 
+/*Header for each page, including nav bar*/
 header {
   position: relative;
   max-width: 100%;
@@ -25,6 +28,8 @@ header {
   color: white;
 }
 
+
+
 nav {
   float: right;
 }
@@ -32,6 +37,8 @@ nav {
 .clearfix {
   clear: both;
 }
+
+
 
 nav ul {
   margin: 0;
@@ -51,14 +58,17 @@ nav ul li a {
   color: white;
   ;
   font-size: 22px;
+
 }
 
-nav ul li a.active, nav ul li a:hover {
+nav ul li a.active,
+nav ul li a:hover {
   background: #de3c3c;
   color: white;
   transition: 0.5s;
 }
 
+/*Helps with responsiveness*/
 @media (min-width:1068px) {
   .dropbtn {
     display: none;
@@ -72,6 +82,9 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 @media (max-width:1068px) {
+
+
+
   .toggle:before {
     content: '';
     line-height: 40px;
@@ -88,6 +101,7 @@ nav ul li a.active, nav ul li a:hover {
   .toggle {
     display: none;
   }
+
 
   nav.active {
     display: block;
@@ -112,11 +126,13 @@ nav ul li a.active, nav ul li a:hover {
   border: none;
   cursor: pointer;
   align-self: center;
+
   float: right
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
   background-color: #ff8091;
   color: white;
 }
@@ -126,6 +142,9 @@ nav ul li a.active, nav ul li a:hover {
   position: relative;
   display: inline-block;
   float: right;
+
+
+
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -138,6 +157,7 @@ nav ul li a.active, nav ul li a:hover {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-size: 18px;
+
 }
 
 /* Links inside the dropdown */
@@ -146,6 +166,7 @@ nav ul li a.active, nav ul li a:hover {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+
 }
 
 /* Change color of dropdown links on hover */
@@ -159,135 +180,8 @@ nav ul li a.active, nav ul li a:hover {
   display: block;
 }
 
-.gridbuttonlayout {
-  display: grid;
-  width: 30%;
-  grid-gap: 40px;
-  margin-left: 50%;
-  margin-top: 50px;
-}
 
-.gridbutton {
-  font-family: monospace;
-  font-size: 28px;
-  cursor: pointer;
-  text-align: center;
-  padding: 30px;
-  font-weight: bold;
-  display: inline;
-  border-radius: 25px;
-  border-width: thick;
-}
-
-#incomebutton:hover {
-  box-shadow: 0px 15px 20px green;
-  transition: 0.5s;
-}
-
-#expenditurebutton:hover {
-  box-shadow: 0px 15px 20px red;
-  transition: 0.5s;
-}
-
-#accountbutton:hover {
-  box-shadow: 0px 15px 20px black;
-  transition: 0.5s;
-}
-
-.reportsbutton {
-  font-family: monospace;
-  font-size: 28px;
-  cursor: pointer;
-  text-align: center;
-  padding: 30px;
-  font-weight: bold;
-  display: inline;
-  float: left;
-  margin-left: 15%;
-  width: 30%;
-  margin-top: 80px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  border-radius: 25px;
-}
-
-.reportsbutton:hover {
-  background-color: white;
-  background-image: url(images/reportbuttonbackground.jpg);
-  transition: 0.5s;
-  cursor: pointer;
-  box-shadow: 0px 15px 20px black;
-}
-
-#incomebutton:hover {
-  background-image: url(images/incomebuttonbackground.png);
-}
-
-#expenditurebutton:hover {
-  background-image: url(images/expenditurebuttonbackground.png);
-}
-
-#accountbutton:hover {
-  background-image: url(images/accountbuttonbackground.png);
-}
-
-.expendituregrid {
-  display: inline-block;
-  margin-left: 175px;
-}
-
-.expgridbutton {
-  font-family: monospace;
-  font-size: 22px;
-  cursor: pointer;
-  text-align: center;
-  padding: 50px;
-  font-weight: bold;
-  display: inline;
-  border-radius: 25px;
-  border-width: thick;
-}
-
-.expgridbutton:hover {
-  box-shadow: 0px 15px 20px black;
-  transition: 0.5s;
-}
-
-@media(max-width:1210px) {
-  .expendituregrid {
-    width: auto;
-    display: grid;
-    grid-gap: 30px;
-    padding: 10px;
-  }
-
-  .expgridbutton {
-    padding: 40px;
-  }
-}
-
-#declareexpediture:hover {
-  box-shadow: 0px 15px 20px red;
-  transition: 0.5s;
-}
-
-#declareincome:hover {
-  box-shadow: 0px 15px 20px green;
-  transition: 0.5s;
-}
-
-.expinfo {
-  text-align: center;
-  width: auto;
-  margin-top: 70px;
-  padding: 20px;
-  font-size: 14px;
-}
-
-#container a {
-  font-size: 13px;
-}
-
+/* Login Page*/
 .login {
   background-color: #ee6e73;
   color: white;
@@ -298,324 +192,72 @@ nav ul li a.active, nav ul li a:hover {
   margin-top: 80px;
 }
 
-#loginform {
-  width: 240px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-#loginform p {
-  padding-top: 1px;
-}
-
-#loginform input {
-  width: 240px;
-  text-align: center;
-  border: none;
-  border-bottom: 1px solid white;
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 200px;
-  padding: 10px 0;
-  transition: border 0.5s;
-  outline: none;
-  color: black;
-}
-
-#loginform input[type=button] {
-  border: none;
-  width: 190px;
-  background: white;
-  color: black;
-  font-size: 16px;
-  line-height: 25px;
-  padding: 10px 0;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-#loginform input[type=button]:hover {
-  color: white;
-  background: #ee6e73;
-}
-
-#container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  padding-top: 50px;
-}
-
-#loginform a {
-  color: white;
-  padding: 5px;
-}
-
-.signup {
-  padding: 40px;
-  width: 250px;
-  margin: auto;
-  margin-top: 80px;
-  height: 430px;
-  margin-left: 180px;
-  margin: 0 auto;
-  margin-top: 90px;
-  background: #ee6e73;
-  color: white;
-}
-
-.signup form {
-  width: 240px;
-  text-align: center;
-}
-
-.signup input {
-  width: 240px;
-  text-align: center;
-  border: none;
-  border-bottom: 1px solid black;
-  font-family: 16px;
-  font-weight: 200px;
-  padding: 10px 0;
-  transition: border 0.5s;
-  outline: none;
-  color: black;
-}
-
-.signup input[type=button] {
-  border: none;
-  width: 190px;
-  background: white;
-  color: black;
-  font-size: 16px;
-  line-height: 25px;
-  padding: 10px 0;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.signup input[type=button]:hover {
-  color: white;
+/*Homepage*/
+.totalvalue{
   background-color: #ee6e73;
+  width:50%;
+  text-align:center;
+  margin:0 auto;
+  color:white;
+  margin-top:10%;
+  padding:25px;
 }
 
-.signup a {
-  color: white;
-  font-weight: bold;
-}
 
-.date-picker {
-  position: relative;
-  width: 100%;
-  max-width: 160px;
-  height: 30px;
-  background-color: #FFF;
-  display: inline-block;
-  float: right;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  font-size: 14px;
-  color: black;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 8px;
-}
+/*Income and Expenditure forms*/
 
-.date-picker:hover {
-  background-color: #F3F3F3;
-}
+.incomeform,
+.expenditureform {
 
-.date-picker .selected-date {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #313131;
-}
 
-.date-picker .dates {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  background-color: white;
-}
-
-.date-picker .dates.active {
-  display: block;
-  font-size: 16px;
-}
-
-.date-picker .dates .month {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #EEE;
-  font-size: 12px;
-}
-
-.date-picker .dates .month .arrows {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #313131;
-  font-size: 10px;
-}
-
-.date-picker .dates .month .arrows:hover {
-  background-color: #f04646;
-  font-size: 10px;
-}
-
-.date-picker .dates .month .arrows:active {
-  background-color: #f04646;
-}
-
-.date-picker .dates .days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  height: 150px;
-  font-size: 10px;
-}
-
-.date-picker .dates .days .day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #313131;
-}
-
-.date-picker .dates .days .day.selected {
-  background-color: #f04646;
-}
-
-.dateofpurchase {
-  display: inline;
-  margin-top: 50px;
-}
-
-.incomeform, .expenditureform {
   padding: 20px;
   width: 350px;
   margin: auto;
   margin-top: 20px;
-  height: 500px;
+  height: 560px;
+
+
+
   background: #ee6e73;
   color: white;
 }
 
-.incomeform label, .expenditureform label {
-  text-align: : left;
+.incomeform label,
+.expenditureform label {
+
+  text-align: left;
 }
 
-.incomeform select, .expenditureform select {
+.incomeform select,
+.expenditureform select {
   float: right;
   width: 160px;
 }
 
-.select-box {
-  display: flex;
-  width: 160px;
-  flex-direction: column;
-  float: right;
-  font-size: 14px;
-}
 
-.select-box .options-container {
-  background: white;
-  color: black;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-  order: 1;
-}
 
-.selected {
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  color: black;
-  position: relative;
-  order: 0;
-}
 
-.selected::after {
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
-  transition: all 0.4s;
-}
-
-.select-box .options-container.active {
-  max-height: 100px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
-.select-box .options-container.active+.selected::after {
-  transform: rotateX(180deg);
-  top: -6px;
-}
-
-.select-box .options-container::-webkit-scrollbar {
-  width: 8px;
-  background: #0d141f;
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .option,
-.selected {
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.select-box .option:hover {
-  background: #f04646;
-  color: white;
-}
-
-.select-box label {
-  cursor: pointer;
-}
-
-.select-box .option .radio {
-  display: none;
-}
-
-.incomeamount label, .expenditureamount label {
+.incomeamount label,
+.expenditureamount label {
   float: left;
 }
 
-.incomeamount input, .expenditureamount input {
+input {
   float: right;
   border-radius: 8px;
   width: 160px;
   text-align: center;
   font-size: 14px;
 }
+
 
 .container {
   display: inline;
 }
 
-.incomeform button, .expenditureform button {
+
+.incomeform button,
+.expenditureform button {
   margin-top: 50px;
   border-radius: 8px;
   font-size: 16px;
@@ -623,7 +265,9 @@ nav ul li a.active, nav ul li a:hover {
   cursor: pointer;
 }
 
-.incomeform button:hover, .expenditureform button:hover {
+.incomeform button:hover,
+.expenditureform button:hover {
+
   border-radius: 8px;
   font-size: 16px;
   padding: 10px;
@@ -633,13 +277,15 @@ nav ul li a.active, nav ul li a:hover {
   color: white;
 }
 
+/*Financial reports table*/
 #myTable {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
+  margin:0 auto;
 }
 
 #HeadRow {
-  background: #f54047;
+  background: #ee6e73;
   color: white;
   font-weight: bold;
 }
@@ -664,7 +310,7 @@ nav ul li a.active, nav ul li a:hover {
   height: 30px;
   width: 200px;
   color: white;
-  background-color: #004C2E;
+  background-color: #f04646;
 }
 
 .odd {
@@ -675,17 +321,24 @@ nav ul li a.active, nav ul li a:hover {
   background: #99FFD6;
 }
 
-//
+
+
+
+
+
 /* Google Sign-In Button */
 .g-signin2 {
   width: 100%;
 }
 
+
 /* #greeting{
     margin-top: 10px;
 } */
+
 .userName {
-  width: 70% color: #0A38ED;
+  width: 70%;
+   
   font-weight: 1000;
   margin-top: 10px;
 }
