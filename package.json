@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "GOOGLE_CLIENT_ID='1010858472376-iljq2hd7cgai5mddju8rmhmmuvcdtges.apps.googleusercontent.com' node app.js"
+    "start": "GOOGLE_CLIENT_ID='1010858472376-iljq2hd7cgai5mddju8rmhmmuvcdtges.apps.googleusercontent.com' node app.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "jest": "^25.1.0",
     "simple-google-openid": "^0.3.0"
   }
 }

@@ -47,3 +47,19 @@ app.get('/expenditure', function(req, res){
 
 
 };
+
+function data2(data){
+    return data
+};
+
+function val2(valueCounter){
+    return valueCounter
+};
+
+function vale(valueEdit){
+    return valueEdit
+};
+
+module.exports = data2;
+module.exports = val2;
+module.exports = vale;
