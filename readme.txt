@@ -27,3 +27,10 @@ to run the app:
 Please type 'npm start', if this fails due to incompatable bash shell please use 'GOOGLE_CLIENT_ID='1010858472376-iljq2hd7cgai5mddju8rmhmmuvcdtges.apps.googleusercontent.com' node app.js' insted.
 
 now you can connect via localhost:8080
+
+
+
+legend:
+
+Startrek64 - Connor Adamson - UP903492
+
