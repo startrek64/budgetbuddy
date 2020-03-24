@@ -1,3 +1,5 @@
+
+
 var bodyParser = require('body-parser');
 
 // Local varibles to store infomation for reports and user current account balance
@@ -45,8 +47,8 @@ app.get('/expenditure', function(req, res){
 
 
 
-
 };
+
 
 function data2(data){
     return data
@@ -60,6 +62,6 @@ function vale(valueEdit){
     return valueEdit
 };
 
-module.exports = data2;
-module.exports = val2;
-module.exports = vale;
+
+
+
