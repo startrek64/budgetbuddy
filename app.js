@@ -1,8 +1,18 @@
 var express = require('express');
 var app = express();
-var actionController = require('./controllers/actionController')
+
+
 
 // required modules
+
+var bodyParser = require('body-parser');
+
+// Local varibles to store infomation for reports and user current account balance
+
+var data = [{ammount: 200, category: 'Salary', date: '01/02/2020'}, {ammount: 400, category: 'Salary', date: '01/02/2020'}];
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var valueCounter = 600.00;
+var valueEdit = 0;
 
 app.set('view engine', 'ejs');
 
@@ -25,9 +35,37 @@ app.get('/signout', function(req, res){
     console.log('request was made on: / ');
 })
 
-// fire controller
+app.post('/income', urlencodedParser, function(req, res){
+    data.push(req.body);
+    valueEdit = (req.body.ammount);
+    valueCounter = +valueCounter + +valueEdit;
+    console.log(req.body);
+});
 
-actionController(app);
+app.post('/expenditure', urlencodedParser, function(req, res){
+    data.push(req.body);
+    valueEdit = (req.body.ammount);
+    valueCounter = +valueCounter + +valueEdit;
+    console.log(req.body);
+});
+
+app.get('/homepage', function(req, res){
+   res.render('homepage', {value: valueCounter});
+    console.log('request was made on: /homepage');
+})
+
+app.get('/report', function(req, res){
+    res.render('reports', {repos: data});
+});
+
+app.get('/income', function(req, res){
+    res.render('incomep');
+});
+
+app.get('/expenditure', function(req, res){
+    res.render('expenditurepage');
+    console.log('request was made on: /expenditure ');
+});
 
 app.listen(8080);
 
@@ -46,3 +84,4 @@ app.get('/api/hello', (req, res) => {
 
   console.log('successful authenticated request by ' + req.user.emails[0].value);
 });
+
